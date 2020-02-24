@@ -1,10 +1,6 @@
-import numpy as np
-
-import pyqrcode as pq
-
 import click
 
-from .functions import wifi_qr, qr2array
+from functions import wifi_qr
 
 
 @click.group()
@@ -30,3 +26,11 @@ def terminal(ctx):
 def png(ctx, filename, scale: int = 10):
     """Create a PNG file of the QR code."""
     ctx.obj['qr'].png(filename, scale)
+
+
+def start():
+    main(obj={})
+
+
+if __name__ == '__main__':
+    start()

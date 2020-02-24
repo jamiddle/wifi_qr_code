@@ -1,0 +1,5 @@
+pyqrcode
+SolidPython
+numpy
+Flask
+click
